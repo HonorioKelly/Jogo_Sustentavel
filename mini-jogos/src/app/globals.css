@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+
+.body-container {
+    max-width: 1920px;  /* Limita a largura máxima do site */
+    margin: 0 auto;     /* Centraliza o conteúdo na tela */
+    width: 100%;        /* Garante que o conteúdo ocupe 100% da largura disponível até 1500px */
+    box-sizing: border-box; /* Evita que padding e border aumentem o tamanho total */
+    padding: 0 20px;    /* Adiciona um espaçamento interno para evitar que o conteúdo encoste nas bordas */
+  }
+  
