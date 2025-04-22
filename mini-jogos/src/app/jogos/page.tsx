@@ -9,12 +9,12 @@ export default function JogosGaleria() {
     {
       nome: "Nome do jogo",
       imagem: "/Logo_Agua.jpg", // coloque essa imagem na pasta /public/jogos
-      link: "/jogos/penalty-challenge",
+      link: "/jogos/jogo3",
     },
     {
       nome: "Nome do jogo",
       imagem: "/Logo_Memoria.jpg",
-      link: "/jogos/fireboy-watergirl",
+      link: "/jogos/jogo2",
     },
     {
       nome: "Nome do jogo",
