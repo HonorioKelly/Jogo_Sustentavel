@@ -1,14 +1,46 @@
 
+import Image from "next/image";
+import Link from "next/link";
+import "./index.css"; // importa seu CSS
 
-export default function SepareCerto() {
-    return (
-      <div className="p-6">
-        <h1 className="text-2xl font-bold text-green-800">♻️ Separe Certo</h1>
-        <p className="text-green-700 mt-2">
-          Esse jogo te ajuda a aprender como separar corretamente o lixo reciclável.
-        </p>
-        {/* Aqui virá o código real do jogo */}
-      </div>
-    );
-  }
-  
+
+export default function JogosGaleria() {
+  const jogos = [
+    {
+      nome: "Nome do jogo",
+      imagem: "/Logo_Agua.jpg", // coloque essa imagem na pasta /public/jogos
+      link: "/jogos/penalty-challenge",
+    },
+    {
+      nome: "Nome do jogo",
+      imagem: "/Logo_Memoria.jpg",
+      link: "/jogos/fireboy-watergirl",
+    },
+    {
+      nome: "Nome do jogo",
+      imagem: "/Logo_Logica.jpg",
+      link: "/jogos/chess",
+    },
+  ];
+
+  return (
+    <div className="galeria-jogos">
+      {jogos.map((jogo) => (
+        <Link href={jogo.link} key={jogo.nome} className="group">
+          <div className="rounded-3xl overflow-hidden shadow-lg bg-white hover:scale-105 transition-transform">
+            <Image
+              src={jogo.imagem}
+              alt={jogo.nome}
+              width={300}
+              height={150}
+              className="w-full h-auto"
+            />
+            <div className="text-center p-2 text-black font-semibold text-lg group-hover:text-green-700">
+              {jogo.nome}
+            </div>
+          </div>
+        </Link>
+      ))}
+    </div>
+  );
+}

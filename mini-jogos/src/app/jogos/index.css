@@ -1,0 +1,15 @@
+.galeria-jogos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;         /* equivalente ao gap-6 */
+    padding: 1.5rem;     /* equivalente ao p-6 */
+    background-color: #09c590; /* bg-green-800 */
+  }
+  
+  /* Responsividade para telas médias (sm:grid-cols-3) */
+  @media (min-width: 640px) {
+    .galeria-jogos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
