@@ -18,7 +18,11 @@
   .container {
     max-width: 64rem; /* max-w-4xl */
     margin: 0 auto; /* mx-auto */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* espaço entre logo e texto */
   }
+  
   
   .titulo {
     font-size: 1.875rem; /* text-3xl */
@@ -29,9 +33,13 @@
   }
   
   .subtitulo {
-    font-size: 0.875rem; /* text-sm */
+    font-size: 20px; /* text-sm */
     color: #065f46; /* text-green-800 */
     margin-top: 0.25rem; /* mt-1 */
+    display: flex;
+    align-items: center;
+    gap: 12px; /* espaço entre logo e texto */
+  
   }
   
   .nav-menu {
