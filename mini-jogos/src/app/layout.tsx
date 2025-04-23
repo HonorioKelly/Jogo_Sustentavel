@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { Inter } from "next/font/google";
 import "./globals.css"; // importa seu CSS global
 
@@ -20,12 +22,20 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${inter.variable} bg-green-50 text-green-900 antialiased`}>
-        <header className="bg-green-100 py-6 px-4 shadow-sm">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl font-bold flex items-center gap-2">
-              ♻️ Sustentabilidade em Foco
-            </h1>
-            <p className="text-sm text-green-800 mt-1">
+        <header className="header-custom">
+          <div className="container">
+            <Link
+              href="/ " className="logo-link">
+          <Image
+            src="/Logo_Principal.png"
+            alt="Sustentabilidade em Foco"
+            width={120} // ajuste o tamanho conforme sua necessidade
+            height={50}
+            className="logo-img"
+          />
+          
+          </Link>
+            <p className="sub-titulo">
               Promovendo o uso consciente dos recursos naturais
             </p>
             <div className="nav-menu">
@@ -35,14 +45,14 @@ export default function RootLayout({
                             <a href="#" className="nav-link">New Arrivals</a>
                             <a href="#" className="nav-link">Brands</a>
                             </div>
-          </div>
+            </div>
         </header>
 
-        <main className="max-w-4xl mx-auto px-4 py-10">
+        <main className="conteudo-principal">
           {children}
         </main>
 
-        <footer className="bg-green-100 text-center py-4 text-green-700 text-sm">
+        <footer className="rodape">
           &copy; {new Date().getFullYear()} - Feito com 🌱 e 💻
         </footer>
       </body>
